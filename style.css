@@ -1,0 +1,36 @@
+#container{  
+    border: 1px solid red;
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 1fr 1fr 4fr 2fr 1fr;
+}
+
+#header{
+    border:5px solid black;
+    grid-column:1/6;
+}
+
+#menus{
+    border:5px solid red;
+    grid-column:1/6;
+}
+
+#size-panel{
+    border:5px solid green;
+    grid-column:1/2;
+}
+
+#paint-panel{
+    border:5px solid purple;
+    grid-column:2/6;
+}
+
+#colors{
+    border:5px solid black;
+    grid-column:1/6;
+}
+
+#footer{
+    border:5px solid yellow;
+    grid-column:1/6;
+}
