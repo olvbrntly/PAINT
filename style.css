@@ -1,20 +1,73 @@
+body{
+    margin:0;
+    background-color:rgb(177, 177, 177);
+}
+
 #container{  
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display:grid;
     grid-template-columns: repeat(5,1fr);
-    grid-template-rows: 1fr 1fr 4fr 2fr 1fr;
+    grid-template-rows: 3em 1.5em 4fr 2fr 1fr;
 }
+
+/* Header ---------------------- */
 
 #header{
-    border:5px solid black;
     grid-column:1/6;
+    display:flex;
+    justify-content:space-between;
+    background-color:rgb(14, 27, 148);     
 }
+
+#header .left{
+    display:flex;
+    gap:.5em;
+}
+
+#header .title{
+    display:flex;
+    align-items: center;
+    font-size:1.25em;
+    font-weight: bold;
+    color:rgb(210, 210, 210);
+}
+
+#header .right{
+    display:flex;
+    gap:1em;
+    font-weight: bold;
+    align-items: center;
+    padding-right: 1em;
+
+}
+
+.right button{
+    background-color: rgb(177, 177, 177);
+    padding:0 .5em 0 .5em;
+    height:1.5em;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow: 1px 1px 2px gray;
+}
+
+/*Menus ------------------------*/
 
 #menus{
-    border:5px solid red;
+    /* border:5px solid red; */
     grid-column:1/6;
+    display:flex;
+    flex-direction:row;
+    gap:1.5em;
 }
 
+.menu{
+    text-decoration: none;
+    color:black;
+   
+}
+
+/* Size Panel------------------- */
 #size-panel{
     border:5px solid green;
     grid-column:1/2;
