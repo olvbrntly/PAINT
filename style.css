@@ -7,7 +7,7 @@ body{
     /* border: 1px solid red; */
     display:grid;
     grid-template-columns: repeat(5,1fr);
-    grid-template-rows: 3em 1.5em 4fr 2fr 1fr;
+    grid-template-rows: 3em 1.5em 9fr 2fr 1fr;
 }
 
 /* Header ---------------------- */
@@ -22,6 +22,15 @@ body{
 #header .left{
     display:flex;
     gap:.5em;
+    align-items:center;
+    justify-content:center;
+    padding-left: .5em;;
+}
+
+#header .left img{
+    height:40px;
+    width:40px;
+
 }
 
 #header .title{
@@ -59,27 +68,67 @@ body{
     display:flex;
     flex-direction:row;
     gap:1.5em;
+    align-items:center;
+    margin-bottom: 5px;
 }
 
 .menu{
     text-decoration: none;
     color:black;
-   
 }
 
 /* Size Panel------------------- */
 #size-panel{
-    border:5px solid green;
     grid-column:1/2;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    padding: 0px 5px 0px 5px;
 }
 
+#size-panel p{
+    text-align: center;
+    grid-row: 1/2;
+    font-size:2em;
+    text-decoration: underline;
+}
+
+#size-panel #size-buttons{
+    grid-row:2/3;
+    display:flex;
+    flex-direction: column;
+    gap:1em;
+    font-size:2em;
+}
+
+#size-panel button{
+    font-size:.75em;
+    border-radius: 10px;
+    background-color: rgb(101, 101, 101);
+    color: antiquewhite;
+    box-shadow:2px 2px rgb(74, 74, 74);
+    padding:10px;
+}
+
+#custom p{
+    font-size: 1.05em;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+#custom input{
+    font-size:1em;
+    border-radius: 5px;
+}
+
+/* Paint Panel------------------ */
 #paint-panel{
-    border:5px solid purple;
+    border:2px solid black;
+    margin-right:4px;
     grid-column:2/6;
 }
 
 #colors{
-    border:5px solid black;
+    
     grid-column:1/6;
 }
 
