@@ -148,8 +148,9 @@ body{
 #colors p{
     font-size:2em;
     text-decoration: underline;
-    padding: 0;
+    padding: 0px;
     margin: 0;
+    text-align: center;
 }
 
 #color-buttons{
@@ -163,8 +164,10 @@ body{
     box-shadow:2px 2px rgb(74, 74, 74);
     font-size:22px;
     border-radius: 10px;
+    padding:7px;
 }
 
 #footer{
     grid-column:1/6;
+    padding-left: 20px;
 }
