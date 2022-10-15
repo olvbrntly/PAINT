@@ -133,6 +133,5 @@ body{
 }
 
 #footer{
-    border:5px solid yellow;
     grid-column:1/6;
 }
