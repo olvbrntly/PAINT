@@ -4,7 +4,12 @@ let paintPanel = document.getElementById("paint-panel");
 
 //FUNCTIONS---------------------------------
 
-function createGrid(){
+function createGrid(value){
+  for(i = 0; i <= value, i++)
+  //value from button
+  //for that value create that many divs
+    //same for columns
+  //
 
 }
 
