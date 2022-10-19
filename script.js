@@ -17,7 +17,7 @@ let value = prompt("number", "8");
 rainbowBtn.addEventListener('click', rainbow);
 blackBtn.addEventListener('click', black);
 eraseBtn.addEventListener('click', erase);
-
+clearBtn.addEventListener('click', clear);
 
 let current = defaultColor;
 
@@ -68,7 +68,13 @@ function erase(){
   current = eraseGrid;
 }
 
-
+function clear(){
+  let gridDivs = document.querySelectorAll('.grid');
+  for(let i = 0; i < gridDivs.length; i++)
+  {
+    gridDivs[i].style.backgroundColor = 'white';
+  }
+}
 
 //COLOR FUNCTIONS---------------------------
 function defaultColor(){
@@ -85,12 +91,10 @@ function getRainbow(){
   return color;
 }
 
-function resetGrid(){
-}
-
 function eraseGrid(){
   this.style.backgroundColor= 'white';
 }
+
 
 //EVENT LISTENERS----------------------------------
 
