@@ -128,6 +128,12 @@ body{
     border-radius: 5px;
 }
 
+#size-panel #grid-lines{
+    font-size:20px;
+    background-color: rgb(85, 83, 83);
+    padding:0;
+}
+
 /* Paint Panel------------------ */
 #paint-panel{
     border:2px solid black;
@@ -137,7 +143,6 @@ body{
     width:550px;
     display: grid;
     background-color:white;
-
 }
 
 /* COLORS----------------------- */
@@ -177,7 +182,7 @@ body{
 
 /* GRID------------ */
 
-.grid{
+.boxes{
     border:1px solid black;
     box-sizing: border-box;  
 }

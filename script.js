@@ -1,11 +1,11 @@
 //VARIABLES---------------------------------
-//const grid = document.querySelectorAll('.grid');
+const grid = document.querySelectorAll('.grid');
 let paintPanel = document.getElementById("paint-panel");
 let blackBtn = document.getElementById('blackBtn');
 let rainbowBtn = document.getElementById('rainbowBtn');
 let eraseBtn = document.getElementById('eraseBtn');
 let clearBtn = document.getElementById('clearBtn');
-
+let toggleBtn = document.getElementById('grid-lines');
 
 let sizeButtons = document.querySelectorAll('.size-buttons')
 
@@ -18,6 +18,7 @@ rainbowBtn.addEventListener('click', rainbow);
 blackBtn.addEventListener('click', black);
 eraseBtn.addEventListener('click', erase);
 clearBtn.addEventListener('click', clear);
+toggleBtn.addEventListener('click', toggle);
 
 let current = defaultColor;
 
@@ -30,6 +31,7 @@ function createGrid(value){
     {
           const gridBox = document.createElement('div');
           gridBox.classList.add('grid');
+          gridBox.classList.add('boxes');
           paintPanel.appendChild(gridBox);
           gridBox.addEventListener('mouseover', current)
     }
@@ -74,6 +76,11 @@ function clear(){
   {
     gridDivs[i].style.backgroundColor = 'white';
   }
+}
+
+function toggle(){
+  let gridDivs = document.querySelectorAll('.grid');
+  gridDivs.forEach(div=>div.classList.toggle('boxes'));
 }
 
 //COLOR FUNCTIONS---------------------------
