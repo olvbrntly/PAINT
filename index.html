@@ -36,9 +36,9 @@
 
                 <p>Pick a Size</p>
                 <div id="size-buttons">
-                    <button id="b1">8x8</button>
-                    <button id="b2">16x16</button>
-                    <button id="b3">32x32</button>
+                    <button class="size-buttons" data="8" id="8">8x8</button>
+                    <button  class="size-buttons" data-id="16">16x16</button>
+                    <button  class="size-buttons" data-id="32">32x32</button>
                 </div>
 
                 <div id="custom">
@@ -58,10 +58,10 @@
             <p>Pick a Color</p>
 
             <div id="color-buttons">
-                <button>BLACK</button>
-                <button>RAINBOW</button>
-                <button>ERASE</button>
-                <button>CLEAR</button>
+                <button id="blackBtn">BLACK</button>
+                <button id="rainbowBtn">RAINBOW</button>
+                <button is="eraseBtn">ERASE</button>
+                <button id="clearBtn">CLEAR</button>
                 <input type="color">
             </div>
 
@@ -73,18 +73,7 @@
 
     </div>
     
-    </div>
 
-
-
-
-
-
-
-
-
-
-
-    <script src="script.js"></script>
+ <script src="script.js"></script>
 </body>
 </html>

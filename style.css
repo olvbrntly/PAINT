@@ -131,10 +131,13 @@ body{
 /* Paint Panel------------------ */
 #paint-panel{
     border:2px solid black;
-    margin-right:4px;
+    margin:auto;
     grid-column:3/6;
     height:550px;
     width:550px;
+    display: grid;
+    background-color:white;
+
 }
 
 /* COLORS----------------------- */
@@ -170,4 +173,11 @@ body{
 #footer{
     grid-column:1/6;
     padding-left: 20px;
+}
+
+/* GRID------------ */
+
+.grid{
+    border:1px solid black;
+    box-sizing: border-box;  
 }
