@@ -1,5 +1,5 @@
 //VARIABLES---------------------------------
-const grid = document.querySelectorAll('.grid');
+//const grid = document.querySelectorAll('.grid');
 let paintPanel = document.getElementById("paint-panel");
 let blackBtn = document.getElementById('blackBtn');
 let rainbowBtn = document.getElementById('rainbowBtn');
@@ -14,10 +14,16 @@ let sixteenBySixteen;
 
 let value = prompt("number", "8");
 
+rainbowBtn.addEventListener('click', rainbow);
+blackBtn.addEventListener('click', black);
+eraseBtn.addEventListener('click', erase);
+
+
 let current = defaultColor;
 
 //FUNCTIONS---------------------------------
 
+//CREATE DIV--------------------------------
 function createGrid(value){
     paintPanel.style.gridTemplateColumns = `repeat(${value},1fr)`
     for(i = 0; i < value * value; i++)
@@ -31,30 +37,63 @@ function createGrid(value){
   
 createGrid(value);
 
+//BUTTON FUNCTIONS---------------------------
+function rainbow() {
+  let gridDivs = document.querySelectorAll('.grid');
+  for(let i = 0; i < gridDivs.length; i++)
+  {
+    gridDivs[i].removeEventListener('mouseover', current);
+    gridDivs[i].addEventListener('mouseover', getRainbow);
+  }
+  current = getRainbow;
+}
+
+function black(){
+  let gridDivs = document.querySelectorAll('.grid');
+  for(let i = 0; i < gridDivs.length; i++)
+  {
+    gridDivs[i].removeEventListener('mouseover', current);
+    gridDivs[i].addEventListener('mouseover', defaultColor);
+  }
+  current = defaultColor;
+}
+
+function erase(){
+  let gridDivs = document.querySelectorAll('.grid');
+  for(let i = 0; i < gridDivs.length; i++)
+  {
+    gridDivs[i].removeEventListener('mouseover', current);
+    gridDivs[i].addEventListener('mouseover', eraseGrid);
+  }
+  current = eraseGrid;
+}
+
+
+
+//COLOR FUNCTIONS---------------------------
 function defaultColor(){
   this.style.backgroundColor = 'black';
 }
 
-function colorBlack(){
-  this.style.backgroundColor= 'black';
-}
-
-function colorRainbow(){
-
+function getRainbow(){
+  let letters ='0123456789ABCDEF';
+  let color ='#';
+  for(let i = 0; i < 6; i++){
+      color+= letters[Math.floor(Math.random()*16)];
+    }
+  this.style.backgroundColor = color;
+  return color;
 }
 
 function resetGrid(){
-
 }
 
-function erase(){
+function eraseGrid(){
   this.style.backgroundColor= 'white';
-  current = erase;
 }
 
 //EVENT LISTENERS----------------------------------
 
-eraseBtn.addEventListener('click', erase);
 
 
 //click 8x8 to make grid 8x8
