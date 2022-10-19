@@ -9,16 +9,21 @@ let toggleBtn = document.getElementById('grid-lines');
 
 let sizeButtons = document.querySelectorAll('.size-buttons')
 
-let eight = document.getElementById('8')
+let eightBtn = document.getElementById('8')
 let sixteenBySixteen;
 
 let value = prompt("number", "8");
 
+//color button event listeners
 rainbowBtn.addEventListener('click', rainbow);
 blackBtn.addEventListener('click', black);
 eraseBtn.addEventListener('click', erase);
 clearBtn.addEventListener('click', clear);
 toggleBtn.addEventListener('click', toggle);
+
+//size button event listeners
+// eightBtn.addEventListener('click', eight);
+
 
 let current = defaultColor;
 
@@ -40,6 +45,7 @@ function createGrid(value){
 createGrid(value);
 
 //BUTTON FUNCTIONS---------------------------
+
 function rainbow() {
   let gridDivs = document.querySelectorAll('.grid');
   for(let i = 0; i < gridDivs.length; i++)
@@ -101,26 +107,3 @@ function getRainbow(){
 function eraseGrid(){
   this.style.backgroundColor= 'white';
 }
-
-
-//EVENT LISTENERS----------------------------------
-
-
-
-//click 8x8 to make grid 8x8
-
-
-//click 16x16 to make grid 8x8
-
-
-//click 32x32 to make grid 8x8
-
-//enter number make grid XxX
-
-//click make color black
-
-//click make color rainbow
-
-//click erase color
-
-//click reset to empty

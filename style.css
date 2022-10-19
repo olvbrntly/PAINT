@@ -126,6 +126,7 @@ body{
 #custom input{
     font-size:1em;
     border-radius: 5px;
+    text-align:right;
 }
 
 #size-panel #grid-lines{
