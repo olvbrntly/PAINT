@@ -6,13 +6,12 @@ let rainbowBtn = document.getElementById('rainbowBtn');
 let eraseBtn = document.getElementById('eraseBtn');
 let clearBtn = document.getElementById('clearBtn');
 let toggleBtn = document.getElementById('grid-lines');
+let number;
 
 let sizeButtons = document.querySelectorAll('.size-buttons')
 
 let slider = document.getElementById("slider");
-
-
-let value = prompt("number", "8");
+let output = document.getElementById("output");
 
 //color button event listeners
 rainbowBtn.addEventListener('click', rainbow);
@@ -20,13 +19,12 @@ blackBtn.addEventListener('click', black);
 eraseBtn.addEventListener('click', erase);
 clearBtn.addEventListener('click', clear);
 toggleBtn.addEventListener('click', toggle);
-
-//size button event listeners
-// eightBtn.addEventListener('click', eight);
-
+slider.addEventListener('input', function(){
+  removeGrid(paintPanel);
+  createGrid(slider.value);
+});
 
 let current = defaultColor;
-
 //FUNCTIONS---------------------------------
 
 //CREATE DIV--------------------------------
@@ -41,9 +39,9 @@ function createGrid(value){
           gridBox.addEventListener('mouseover', current)
     }
   }
-  
-createGrid(value);
 
+let defaultSlider = 16;
+createGrid(defaultSlider);
 //BUTTON FUNCTIONS---------------------------
 
 function rainbow() {
@@ -89,6 +87,11 @@ function toggle(){
   gridDivs.forEach(div=>div.classList.toggle('boxes'));
 }
 
+function removeGrid(parent){
+  while(parent.firstChild){
+    parent.removeChild(parent.firstChild);
+  }
+}
 //COLOR FUNCTIONS---------------------------
 function defaultColor(){
   this.style.backgroundColor = 'black';
@@ -107,3 +110,14 @@ function getRainbow(){
 function eraseGrid(){
   this.style.backgroundColor= 'white';
 }
+
+
+//SLIDER OUTPUT------------------------------
+output.textContent = "Grid Size: " + slider.value + " x " + slider.value;
+slider.oninput = function(){
+  output.textContent = "Grid-Size: " + slider.value + " x " + slider.value;
+  number = slider.value
+}
+ console.log(slider.value);
+
+ 
