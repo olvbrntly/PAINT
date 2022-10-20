@@ -6,7 +6,7 @@ body{
 #container{  
     /* border: 1px solid red; */
     display:grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: 1fr 9fr 1fr;
     grid-template-rows: 3em 1.5em 9fr 2fr 1fr;
 }
 
@@ -79,8 +79,10 @@ body{
 
 /* middle---------------------- */
 #middle{ 
-    grid-column: 1/6;
-    display:grid;
+    grid-column: 2/3;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 /* Size Panel------------------- */
@@ -89,7 +91,8 @@ body{
     display:flex;
     flex-direction: column;
     align-items:center;
-    justify-content:space-evenly;
+    justify-content:center;
+    gap:50px;
     padding: 0px 2px 0px 2px;  
 }
 
@@ -160,12 +163,13 @@ body{
 /* Paint Panel------------------ */
 #paint-panel{
     border:2px solid black;
-    margin:auto;
-    grid-column:3/6;
+    margin: 0 0 0 50px;
+    grid-column:3/5;
     height:550px;
     width:550px;
     display: grid;
     background-color:white;
+    m
    
 }
 
@@ -187,7 +191,8 @@ body{
 
 #color-buttons{
     display:flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap:50px;
 }
 
 #colors button{
