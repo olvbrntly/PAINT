@@ -9,8 +9,8 @@ let toggleBtn = document.getElementById('grid-lines');
 
 let sizeButtons = document.querySelectorAll('.size-buttons')
 
-let eightBtn = document.getElementById('8')
-let sixteenBySixteen;
+let slider = document.getElementById("slider");
+
 
 let value = prompt("number", "8");
 

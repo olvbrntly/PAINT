@@ -78,46 +78,82 @@ body{
 }
 
 /* middle---------------------- */
-#middle{
+#middle{ 
     grid-column: 1/6;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    gap:20px;
+    display:grid;
+    border: 2px solid red;
 }
 
 /* Size Panel------------------- */
 #size-panel{
-    display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
-    padding: 0px 5px 0px 5px;
+    grid-column: 2/3;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:space-evenly;
+    padding: 0px 2px 0px 2px;
+    border:2px solid red;
+   
 }
 
 #size-panel p{
     text-align: center;
-    grid-row: 1/2;
     font-size:2em;
     text-decoration: underline;
 }
 
-#size-panel #size-buttons{
+#slider{
+    -webkit-appearance: none;
+    appearance: none;
+    width:100%;
+    height:25px;
+    background:#080808;
+    outline:none;
+    opacity:0.7;
+    -webkit-transition: .2s;
+    transition:opacity .2s;
+    border-radius: 10px;;
+}
+
+#slider::-webkit-slider-thumb{
+    -webkit-apperance:none;
+    appearance:none;
+    width:25px;
+    height:25px;
+    background: #eaebea;
+    cursor:pointer;
+    border-radius: 10px;;
+}
+
+#slider:hover{
+    opacity:1;
+}
+
+#slider::-moz-range-thumb{
+    width:25px;
+    height:25px;
+    background:#eaebea;
+    cursor:pointer;
+}
+
+/* #size-panel #size-buttons{
     grid-row:2/3;
     display:flex;
     flex-direction: column;
     gap:1em;
     font-size:2em;
-}
+} */
 
 #size-panel button{
     font-size:.75em;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: rgb(101, 101, 101);
     color: antiquewhite;
     box-shadow:2px 2px rgb(74, 74, 74);
-    padding:10px;
-}
+    
+} 
 
-#custom p{
+/* #custom p{
     font-size: 1.05em;
     font-weight: 600;
     margin-bottom: 2px;
@@ -127,7 +163,7 @@ body{
     font-size:1em;
     border-radius: 5px;
     text-align:right;
-}
+} */
 
 #size-panel #grid-lines{
     font-size:20px;
@@ -144,6 +180,7 @@ body{
     width:550px;
     display: grid;
     background-color:white;
+    border:2px solid red;
 }
 
 /* COLORS----------------------- */
@@ -153,7 +190,6 @@ body{
     flex-direction: column;
     gap:20px;
 }
-
 #colors p{
     font-size:2em;
     text-decoration: underline;
