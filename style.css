@@ -81,7 +81,6 @@ body{
 #middle{ 
     grid-column: 1/6;
     display:grid;
-    border: 2px solid red;
 }
 
 /* Size Panel------------------- */
@@ -91,15 +90,22 @@ body{
     flex-direction: column;
     align-items:center;
     justify-content:space-evenly;
-    padding: 0px 2px 0px 2px;
-    border:2px solid red;
-   
+    padding: 0px 2px 0px 2px;  
 }
 
 #size-panel p{
     text-align: center;
     font-size:2em;
     text-decoration: underline;
+    padding:0;
+    margin:0;
+}
+
+#slide-container p{
+    text-decoration: none;
+    font-size:1em;
+    margin-bottom: 0;
+    text-align: left;    
 }
 
 #slider{
@@ -136,14 +142,6 @@ body{
     cursor:pointer;
 }
 
-/* #size-panel #size-buttons{
-    grid-row:2/3;
-    display:flex;
-    flex-direction: column;
-    gap:1em;
-    font-size:2em;
-} */
-
 #size-panel button{
     font-size:.75em;
     border-radius: 5px;
@@ -152,18 +150,6 @@ body{
     box-shadow:2px 2px rgb(74, 74, 74);
     
 } 
-
-/* #custom p{
-    font-size: 1.05em;
-    font-weight: 600;
-    margin-bottom: 2px;
-}
-
-#custom input{
-    font-size:1em;
-    border-radius: 5px;
-    text-align:right;
-} */
 
 #size-panel #grid-lines{
     font-size:20px;
@@ -180,7 +166,7 @@ body{
     width:550px;
     display: grid;
     background-color:white;
-    border:2px solid red;
+   
 }
 
 /* COLORS----------------------- */
@@ -190,6 +176,7 @@ body{
     flex-direction: column;
     gap:20px;
 }
+
 #colors p{
     font-size:2em;
     text-decoration: underline;
